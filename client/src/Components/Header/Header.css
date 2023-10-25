@@ -1,0 +1,25 @@
+/* .h-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+
+.h-wrapper {
+    color: white;
+}
+
+.h-container {
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: var(--secondary);
+}
+
+.h-menu {
+    gap: 2rem;
+}
+
+.h-menu>*:hover {
+    cursor: pointer;
+}
