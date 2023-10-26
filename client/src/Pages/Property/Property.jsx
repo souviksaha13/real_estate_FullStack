@@ -51,7 +51,7 @@ export const Property = () => {
                 </div>
 
                 {/*image */}
-                <img src={data?.image} alt="" srcset="" />
+                <img src={data?.image} alt=""/>
 
                 <div className="flexCenter property-details">
           
