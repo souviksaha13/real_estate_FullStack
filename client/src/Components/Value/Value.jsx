@@ -18,18 +18,19 @@ import data from "../../utils/accordion";
 import { useState } from "react";
 
 export const Value = () => {
-  const controls = useAnimation();
-  const { ref, inView } = useInView();
-
-  useEffect(() => {
-    if (inView) {
-      // Start the animation when the component is in view
-      controls.start({
-        x: 0,
-        opacity: 1,
-      });
-    }
-  }, [controls, inView]);
+    const controls = useAnimation();
+    const { ref, inView } = useInView();
+    const [className, setClassName] = useState(null); // State to track class name
+  
+    useEffect(() => {
+      if (inView) {
+// Start the animation when the component is in view
+        controls.start({
+          x: 0,
+          opacity: 1,
+        });
+      }
+    }, [controls, inView]);
 
   return (
     <section className="v-wrapper">
@@ -70,7 +71,6 @@ export const Value = () => {
                    it specifies that the panel at index 0 will be expanded by default*/}
 
             {data.map((item, i) => {
-              const [className, setclassName] = useState(null);
               return (
           
                 <AccordionItem className={`accordionItem ${className}`} key={i} uuid={i}>
@@ -78,7 +78,7 @@ export const Value = () => {
                     <AccordionItemButton className="flexCenter accordionButton">
                       <AccordionItemState>
                         {({expanded}) => 
-                          expanded ? setclassName("expanded"): setclassName("collapsed")
+                          expanded ? setClassName("expanded"): setClassName("collapsed")
                         }
                       </AccordionItemState>
                       <div className="flexCenter icon">{item.icon} </div>
