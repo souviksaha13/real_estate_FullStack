@@ -13,6 +13,7 @@ export const createUser = asyncHandler(async (req, res) => {
   const userExist = await prisma.user.findUnique({
     where: { email: email },
   });
+  //in the above prisma.user, the user represents the schema present in the database 
 
   if (!userExist) {
     const user = await prisma.user.create({ data: req.body });
