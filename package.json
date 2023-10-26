@@ -3,14 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "frontend" : "cd client && yarn run dev",
-    "backend" : "cd server && yarn run start",
-    "both" : "concurrently \"yarn run frontend\" \"yarn run backend\""
+    "frontend": "cd client && yarn run dev",
+    "backend": "cd server && yarn run start",
+    "both": "concurrently \"yarn run frontend\" \"yarn run backend\""
   },
   "repository": "https://github.com/souviksaha13/real_estate_backend.git",
   "author": "Mayuri13 <mayuri.goswami2017@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "leaflet": "^1.9.4",
+    "lodash": "^4.17.21",
+    "react-leaflet": "4.2.1"
   }
 }
