@@ -14,7 +14,7 @@ const ProfileMenu = ({ user, logout }) => {
           <Menu.Item onClick={() =>{localStorage.clear(); logout()}}>Logout</Menu.Item>
         </Menu.Dropdown>
       </Menu>
-    /* </MantineProvider> */
+    // </MantineProvider> 
   );
 };
 
