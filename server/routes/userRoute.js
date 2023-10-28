@@ -16,9 +16,9 @@ const router = express.Router();
 
 router.post("/register", createUser);
 router.post("/bookVisit/:id", bookVisit);
-router.get("/allBookings", getallbookings);
+router.post("/allBookings", getallbookings);
 router.post("/cancelBooking/:id", cancelBooking);
 router.post("/toFav/:rid", addRemoveFav);
-router.get("/allFavourites", allFavourites);
+router.post("/allFav", allFavourites);
 
 export { router as userRoute };
