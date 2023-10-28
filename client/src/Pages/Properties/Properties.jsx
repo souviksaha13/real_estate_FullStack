@@ -43,6 +43,7 @@ const Properties = () => {
             data.filter(
               (property)=>
                 property.title.toLowerCase().includes(filter.toLowerCase()) ||
+                property.address.toLowerCase().includes(filter.toLowerCase()) ||
                 property.city.toLowerCase().includes(filter.toLowerCase()) ||
                 property.country.toLowerCase().includes(filter.toLowerCase())
               
