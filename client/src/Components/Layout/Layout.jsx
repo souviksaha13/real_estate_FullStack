@@ -3,9 +3,9 @@ import { Outlet } from "react-router-dom";
 import { Footer } from "../Footer/footer";
 import Header from "../Header/Header"
 import { useAuth0 } from "@auth0/auth0-react";
-import UserDetailContext from "../../Context/userDetailContext";
 import { useMutation } from "react-query";
 import { createUser } from "../../utils/api";
+import UserDetailContext from "../../Context/userDetailContext";
 
 const Layout = () => {
 
