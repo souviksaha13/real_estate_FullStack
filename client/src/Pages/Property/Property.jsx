@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useQuery } from "react-query";
 import { useLocation } from "react-router-dom";
 import { getProperty } from "../../utils/api";
@@ -9,15 +9,15 @@ import { FaShower } from "react-icons/fa";          //Fashower is used for bathr
 import { AiTwotoneCar } from "react-icons/ai";         //for parking icon
 import { MdLocationPin, MdMeetingRoom } from "react-icons/md";      //for address and room icon
 import { Map } from "../../Components/Map/map";
+import useAuthCheck from "../../Hooks/useAuthCheck";
 
 export const Property = () => {
     const {pathname} = useLocation();
     const id = pathname.split("/").slice(-1)[0]
-    console.log(id)
-    const {data, isError, isLoading} = useQuery(
-        "resd",
-        ()=> getProperty(id)
-    )
+    const {data, isError, isLoading} = useQuery(["resd", id], ()=> getProperty(id))
+
+    const [modalOpened, setModalOpened] = useState(false)
+    const {validateLogin} = useAuthCheck()
 
     if (isError) {
         return (
