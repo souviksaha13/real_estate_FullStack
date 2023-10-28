@@ -7,11 +7,14 @@ import {
   createUser,
   getallbookings,
 } from "../controllers/userController.js";
-import jwtCheck from "../config/auth0Config.js";
+// import jwtCheck from "../config/auth0Config.js";
 
 const router = express.Router();
 
-router.post("/register",jwtCheck, createUser);
+// router.post("/register", jwtCheck, createUser);
+// can't use jwtCheck because some browsers blocked it
+
+router.post("/register", createUser);
 router.post("/bookVisit/:id", bookVisit);
 router.get("/allBookings", getallbookings);
 router.post("/cancelBooking/:id", cancelBooking);
