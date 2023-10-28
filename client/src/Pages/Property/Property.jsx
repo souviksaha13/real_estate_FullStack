@@ -3,7 +3,6 @@ import { useQuery } from "react-query";
 import { useLocation } from "react-router-dom";
 import { getProperty, removeBooking } from "../../utils/api";
 import { PuffLoader } from "react-spinners";
-import { AiFillHeart } from "react-icons/ai";
 import { Button } from "@mantine/core";
 import "./Property.css";
 import { FaShower } from "react-icons/fa"; //Fashower is used for bathroom icon
@@ -17,6 +16,7 @@ import UserDetailContext from '../../Context/userDetailContext.js'
 import { useMutation } from "react-query";
 import { useContext } from "react";
 import { toast } from "react-toastify";
+import { Heart } from "../../Components/Heart/Heart";
 
 export const Property = () => {
   const { pathname } = useLocation();
@@ -74,7 +74,7 @@ export const Property = () => {
       <div className="flexColStart paddings innerWidth property-container">
         {/*Like Button */}
         <div className="like">
-          <AiFillHeart size={24} color="white" />
+          <Heart id = {id}/>
         </div>
 
         {/*image */}
