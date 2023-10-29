@@ -7,13 +7,14 @@ import OutsideClickHandler from "react-outside-click-handler";
 import { Link, NavLink } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 import ProfileMenu from "../ProfileMenu/ProfileMenu";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const headerColor = useHeaderColor();
   const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0(); // it will provide pre-built login mechanism from auth0
 
-  return (
+    return (
     <section className="h-wrapper" style={{ background: headerColor }}>
       <div className="flexCenter paddings innerWidth h-container">
         {/* logo */}
@@ -33,6 +34,7 @@ const Header = () => {
           >
             <NavLink to="/properties">Properties</NavLink>
             <a href="mailto:souviksaha1305@gmail.com">Contact</a>
+
 
             {/* login button */}
             {isAuthenticated ? (

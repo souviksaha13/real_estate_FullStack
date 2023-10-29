@@ -2,6 +2,13 @@ import React from 'react'
 import './GetStarted.css'
 
 export const GetStarted = () => {
+    const scrollToTop = () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth', // Add smooth scrolling effect
+        });
+      };
+
   return (
     <section className='g-wrapper'>
         <div className="paddings innerWidth g-container">
@@ -14,7 +21,7 @@ export const GetStarted = () => {
                 <br/>
                     Find your residence soon.
                 </span>
-                <button className='button'>
+                <button className='button' onClick={()=>scrollToTop()}>
                     {/*In the vdo this button is for mailing */}
                     Get Started
                 </button>
