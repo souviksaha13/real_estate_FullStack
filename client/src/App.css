@@ -10,6 +10,8 @@
     background: black;
     position: relative;
 }
+
+/* The below css is used for making the white blurred circle*/
 .white-gradient{
     position: absolute;
     width: 20rem;

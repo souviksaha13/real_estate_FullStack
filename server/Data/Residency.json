@@ -245,7 +245,7 @@
     "address": "Street 18",
     "city": "Delhi",
     "country": "India",
-    "image": "https://res.cloudinary.com/dkg6ajfen/image/upload/v1684045778/zdc3pb1d0kgfwxuk8hch.jpg",
+    "image": "https://cdn.pixabay.com/photo/2018/05/08/13/44/architecture-3383067_1280.jpg",
     "facilities": { "bedrooms": 5, "parkings": 2, "bathrooms": 3 },
     "userEmail": "mayuri.souvik1305@gmail.com",
     "createdAt": { "$date": "2023-05-14T06:31:09.883Z" },

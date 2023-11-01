@@ -6,6 +6,7 @@ import { PropertyCards } from "../../Components/PropertyCards/PropertyCards";
 import { useState } from "react";
 import "../Properties/Properties.css";
 import UserDetailContext from "../../Context/userDetailContext.js";
+import { NoDataImage } from "../../Components/NoDataImage/NoDataImage";
 
 const Favourites = () => {
   //Using a custom hook using reactQuery
@@ -56,6 +57,9 @@ const Favourites = () => {
               .map((card, i) => <PropertyCards card={card} key={i} />)
           ) : (
             <span>No data available</span> // Display a message when data is not available
+          )}
+          {!favourites.length && (
+            <NoDataImage title="favourites"/>
           )}
         </div>
       </div>
