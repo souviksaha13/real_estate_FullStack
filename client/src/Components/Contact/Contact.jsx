@@ -1,8 +1,8 @@
 import React from "react";
 import "./Contact.css";
 import { MdCall } from "react-icons/md";
-import {BsFillChatDotsFill} from 'react-icons/bs'
-import {HiChatBubbleBottomCenter} from 'react-icons/hi2'
+import { BsFillChatDotsFill } from "react-icons/bs";
+import { HiChatBubbleBottomCenter } from "react-icons/hi2";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
@@ -26,18 +26,21 @@ export const Contact = () => {
       <div className="paddings innerWidth flexCenter c-container">
         {/*Left Side */}
         <div className="flexColStart c-left">
-        <motion.div initial={{ x: "-5rem", opacity: 0 }}
-          animate={controls}
-          transition={{
-            duration: 3,
-            type: "spring",
-          }}
-          ref={ref} className="flexColStart">
+          <motion.div
+            initial={{ x: "-5rem", opacity: 0 }}
+            animate={controls}
+            transition={{
+              duration: 3,
+              type: "spring",
+            }}
+            ref={ref}
+            className="flexColStart"
+          >
             <span className="orangeText">Our Contacts</span>
             <span className="primaryText">Easy to Contact us</span>
             <span className="secondaryText">
-              We always ready to help by providijng the best services for you. We
-              beleive a good blace to live can make your life better
+              We always ready to help by providijng the best services for you.
+              We beleive a good blace to live can make your life better
             </span>
           </motion.div>
           <div className="flexColStart contactModes">
@@ -46,7 +49,6 @@ export const Contact = () => {
             <div className="flexStart row">
               {/*1st Mode */}
               <div className="flexColCenter mode">
-
                 {/* Below is the div for call icon and the number */}
                 <div className="flexStart">
                   <div className="flexcenter icon">
@@ -59,13 +61,10 @@ export const Contact = () => {
                 </div>
 
                 {/* Below is the button */}
-                <div className="flexCenter button">
-                    Call Now
-                </div>
+                <div className="flexCenter button">Call Now</div>
               </div>
               {/*2nd mode */}
               <div className="flexColCenter mode">
-
                 {/* Below is the div for call icon and the number */}
                 <div className="flexStart">
                   <div className="flexcenter icon">
@@ -78,9 +77,7 @@ export const Contact = () => {
                 </div>
 
                 {/* Below is the button */}
-                <div className="flexCenter button">
-                    Chat Now
-                </div>
+                <div className="flexCenter button">Chat Now</div>
               </div>
             </div>
 
@@ -88,7 +85,6 @@ export const Contact = () => {
             <div className="flexStart row">
               {/*3rd Mode */}
               <div className="flexColCenter mode">
-
                 {/* Below is the div for call icon and the number */}
                 <div className="flexStart">
                   <div className="flexcenter icon">
@@ -101,13 +97,10 @@ export const Contact = () => {
                 </div>
 
                 {/* Below is the button */}
-                <div className="flexCenter button">
-                    Video Call Now
-                </div>
+                <div className="flexCenter button">Video Call Now</div>
               </div>
               {/*4th mode */}
               <div className="flexColCenter mode">
-
                 {/* Below is the div for call icon and the number */}
                 <div className="flexStart">
                   <div className="flexcenter icon">
@@ -120,18 +113,24 @@ export const Contact = () => {
                 </div>
 
                 {/* Below is the button */}
-                <div className="flexCenter button">
-                    Message Now
-                </div>
+                <div className="flexCenter button">Message Now</div>
               </div>
             </div>
           </div>
         </div>
         {/*right Side */}
         <div className="c-right">
-          <div className="image-container">
+          <motion.div
+            initial={{ x: "5rem", opacity: 0 }}
+            animate={controls}
+            transition={{
+              duration: 4,
+              type: "spring",
+            }}
+            className="image-container"
+          >
             <img src="contact.jpg" alt="" />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
