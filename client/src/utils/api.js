@@ -70,13 +70,13 @@ export const bookVisit = async (date, propertyId, email) => {
         email,
         id: propertyId,
         date: dayjs(date).format("DD/MM/YYYY"),
-      },
-    // can't use jwtCheck because it is blocked by some browsers
-    //   {
-    //     headers: {
-    //       Authorization: `Bearer ${token}`,
-    //     },
-    //   }
+      }
+      // can't use jwtCheck because it is blocked by some browsers
+      //   {
+      //     headers: {
+      //       Authorization: `Bearer ${token}`,
+      //     },
+      //   }
     );
   } catch (error) {
     // toast.error("Something went wrong, Please try again");
@@ -86,78 +86,78 @@ export const bookVisit = async (date, propertyId, email) => {
 
 //Removing the Booking
 export const removeBooking = async (id, email) => {
-    try {
-      await api.post(
-        `/user/cancelBooking/${id}`,
-        {
-          email,
-        },
-        // {
-        //   headers: {
-        //     Authorization: `Bearer ${token}`,
-        //   },
-        // }
-      );
-    } catch (error) {
-      toast.error("Something went wrong, Please try again");
-  
-      throw error;
-    }
-  };
+  try {
+    await api.post(
+      `/user/cancelBooking/${id}`,
+      {
+        email,
+      }
+      // {
+      //   headers: {
+      //     Authorization: `Bearer ${token}`,
+      //   },
+      // }
+    );
+  } catch (error) {
+    toast.error("Something went wrong, Please try again");
 
-  //Adding favourites and removing
-  export const toFav = async (id, email) => {
-    try {
-      await api.post(
-        `/user/toFav/${id}`,
-        {
-          email,
-        },
-        // {
-        //   headers: {
-        //     Authorization: `Bearer ${token}`,
-        //   },
-        // }
-      );
-    } catch (e) {
-      throw e;
-    }
-  };
+    throw error;
+  }
+};
 
-  //get all the favourites
-  export const getAllFav = async (email) => {
-    try{
-      const res = await api.post(
-        `/user/allFav`,
-        {
-          email,
-        }
-      );
-        
-      return res?.data["favResidenciesID"]
-  
-    }catch(e)
-    {
-      toast.error("Something went wrong while fetching favs");
-      throw e
-    }
-  } 
+//Adding favourites and removing
+export const toFav = async (id, email) => {
+  try {
+    await api.post(
+      `/user/toFav/${id}`,
+      {
+        email,
+      }
+      // {
+      //   headers: {
+      //     Authorization: `Bearer ${token}`,
+      //   },
+      // }
+    );
+  } catch (e) {
+    throw e;
+  }
+};
 
-  export const getAllBookings = async (email) => {
-    try{
-      const res = await api.post(
-        `/user/allBookings`,
-        {
-          email,
-        }
-      );
-        
-      return res?.data["bookedVisits"]
-  
-    }catch(e)
-    {
-      toast.error("Something went wrong while fetching favs");
-      throw e
-    }
-  } 
-  
+//get all the favourites
+export const getAllFav = async (email) => {
+  try {
+    const res = await api.post(`/user/allFav`, {
+      email,
+    });
+
+    return res?.data["favResidenciesID"];
+  } catch (e) {
+    toast.error("Something went wrong while fetching favs");
+    throw e;
+  }
+};
+
+export const getAllBookings = async (email) => {
+  try {
+    const res = await api.post(`/user/allBookings`, {
+      email,
+    });
+
+    return res?.data["bookedVisits"];
+  } catch (e) {
+    toast.error("Something went wrong while fetching favs");
+    throw e;
+  }
+};
+
+export const createResidency = async (data) => {
+  console.log(data);
+  try {
+    const res = await api.post("/residency/create", {
+      data,
+    });
+  } catch (error) {
+    throw error;
+  }
+};

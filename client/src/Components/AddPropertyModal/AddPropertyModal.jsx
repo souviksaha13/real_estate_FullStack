@@ -23,7 +23,7 @@ const AddPropertyModal = ({ opened, setOpened }) => {
           parkings: 0,
           bathrooms: 0,
         },
-        userEmail: user?.email,
+        userEmail: user.email,
     })
 
     const nextStep = () => {
@@ -58,7 +58,7 @@ const AddPropertyModal = ({ opened, setOpened }) => {
           </Stepper.Step>
 
           {/* Second step */}
-          <Stepper.Step label="Upload Images" description="Upload all the images of the property">
+          <Stepper.Step label="Upload Images" description="of your property">
             <UploadImage 
             prevStep = {prevStep}
             nextStep = {nextStep}
@@ -68,13 +68,24 @@ const AddPropertyModal = ({ opened, setOpened }) => {
           </Stepper.Step>
 
           {/* Third step */}
-          <Stepper.Step label="Basic Details" description="Get some basic details about the property">
+          <Stepper.Step label="Basic Details" description="About the property">
             <BasicDetails
             prevStep = {prevStep}
             nextStep = {nextStep}
             propertyDetails = {propertyDetails}
             setPropertyDetails = {setPropertyDetails}
             /> 
+          </Stepper.Step>
+
+          {/* Fourth step */}
+          <Stepper.Step label="Facilities" description="in the property">
+            <Facilities
+            prevStep={prevStep}
+            propertyDetails={propertyDetails}
+            setPropertyDetails={setPropertyDetails}
+            setOpened={setOpened}
+            setActiveStep={setActive}
+            />
           </Stepper.Step>
 
           {/* final step */}
