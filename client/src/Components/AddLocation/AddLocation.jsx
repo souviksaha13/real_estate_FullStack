@@ -4,6 +4,7 @@ import { validateString } from "../../utils/common";
 import { Button, Group, Select, TextInput } from "@mantine/core";
 import useContries from "../../Hooks/useContries";
 import { Map } from "../Map/Map";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const AddLocation = ({ propertyDetails, setPropertyDetails, nextStep }) => {
   const { getAll } = useContries();
@@ -21,22 +22,31 @@ const AddLocation = ({ propertyDetails, setPropertyDetails, nextStep }) => {
     },
   });
 
+  const { user } = useAuth0();
   const { country, city, address } = form.values;
 
   const handleSubmit = () => {
-    const {hasErrors} = form.validate()
-    if(!hasErrors) {
-        setPropertyDetails((prev) => ({...prev, country, city, address}))
-        nextStep()
+    const { hasErrors } = form.validate();
+    if (!hasErrors) {
+      const userEmail = user.email;
+      setPropertyDetails((prev) => ({
+        ...prev,
+        country,
+        city,
+        address,
+        userEmail,
+      }));
+      nextStep();
     }
-  }
+  };
 
   return (
     <form
-    onSubmit={(evnt) => {
-        evnt.preventDefault()
-        handleSubmit()
-    }}>
+      onSubmit={(evnt) => {
+        evnt.preventDefault();
+        handleSubmit();
+      }}
+    >
       <div
         className="flexCenter"
         style={{
@@ -73,7 +83,7 @@ const AddLocation = ({ propertyDetails, setPropertyDetails, nextStep }) => {
           />
         </div>
         {/* right side */} {/* render the map */}
-        <div style={{flex: 1}}>
+        <div style={{ flex: 1 }}>
           <Map country={country} city={city} address={address} />
         </div>
       </div>
