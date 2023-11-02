@@ -8,10 +8,22 @@ import { Link, NavLink } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 import ProfileMenu from "../ProfileMenu/ProfileMenu";
 import { useNavigate } from "react-router-dom";
+import AddPropertyModal from "../AddPropertyModal/AddPropertyModal";
+import useAuthCheck from "../../Hooks/useAuthCheck"; 
 
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const headerColor = useHeaderColor();
+
+  const [modalOpened, setModalOpened] = useState(false)
+  const {validateLogin} = useAuthCheck()
+
+  const handleAddPropertyClick = () => {
+    if(validateLogin()) {
+      setModalOpened(true)
+    }
+  }
+
   const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0(); // it will provide pre-built login mechanism from auth0
 
     return (
@@ -35,6 +47,12 @@ const Header = () => {
             <NavLink to="/properties">Properties</NavLink>
             <a href="mailto:souviksaha1305@gmail.com">Contact</a>
 
+            {/* add property */}
+            <div onClick={handleAddPropertyClick}>Add property</div>
+            <AddPropertyModal
+            opened = {modalOpened}
+            setOpened = {setModalOpened}
+            /> 
 
             {/* login button */}
             {isAuthenticated ? (
