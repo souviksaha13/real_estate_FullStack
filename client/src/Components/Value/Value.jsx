@@ -37,9 +37,15 @@ export const Value = () => {
       <div className="paddings innerWidth flexCenter v-container">
         {/* Left Conatiner containing the image*/}
         <div className="v-left">
-          <div className="image-container">
+          <motion.div 
+          initial={{ x: "-5rem", opacity: 0 }}
+          animate={controls}
+          transition={{
+            duration: 4,
+            type: "spring",
+          }} className="image-container">
             <img src="./value.png" alt=""/>
-          </div>
+          </motion.div>
         </div>
         {/*Right Container */}
         <div className="flexColStart v-right">

@@ -1,0 +1,9 @@
+.no-data-container>img{
+    height: 210px;
+
+}
+@media (max-width: 470px){
+    .no-data-container>span{
+        font-size: 15px;
+    }
+}

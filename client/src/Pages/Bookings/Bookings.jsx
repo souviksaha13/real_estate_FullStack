@@ -6,12 +6,15 @@ import { PropertyCards } from "../../Components/PropertyCards/PropertyCards";
 import { useState } from "react";
 import "../Properties/Properties.css";
 import UserDetailContext from "../../Context/userDetailContext.js";
+import { NoDataImage } from "../../Components/NoDataImage/NoDataImage";
 
 const Bookings = () => {
   //Using a custom hook using reactQuery
   const { data, isError, isLoading } = useProperties();
   const [filter, setFilter] = useState("");
-  const { userDetails: {bookings} } = useContext(UserDetailContext);
+  const {
+    userDetails: { bookings },
+  } = useContext(UserDetailContext);
 
   if (isError) {
     return (
@@ -49,13 +52,20 @@ const Bookings = () => {
               .filter(
                 (property) =>
                   property.title.toLowerCase().includes(filter.toLowerCase()) ||
-                  property.address.toLowerCase().includes(filter.toLowerCase()) ||
+                  property.address
+                    .toLowerCase()
+                    .includes(filter.toLowerCase()) ||
                   property.city.toLowerCase().includes(filter.toLowerCase()) ||
                   property.country.toLowerCase().includes(filter.toLowerCase())
               )
               .map((card, i) => <PropertyCards card={card} key={i} />)
           ) : (
-            <span>No data available</span> // Display a message when data is not available
+            <div className="no-bookings">
+              <p>You have not made any bookings yet</p>
+            </div>
+          )}
+          {!bookings.length && (
+            <NoDataImage title="booking"/>
           )}
         </div>
       </div>
