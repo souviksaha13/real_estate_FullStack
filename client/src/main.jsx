@@ -10,7 +10,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       domain="sahasouvik.us.auth0.com"
       clientId="3pzwU47v6F93WNawZ9Lq5P0Pugtc4g8M"
       authorizationParams={{
-        redirect_uri: "http://localhost:5173",
+        redirect_uri: "https://real-estate-full-stack-dt8zb2n6q-souvik-sahas-projects-fafc9186.vercel.app",
       }}
       audience="http://localhost:8000"
       scope="openid profile email"
