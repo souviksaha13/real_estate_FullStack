@@ -13,7 +13,6 @@
   "dependencies": {
     "concurrently": "^8.2.2",
     "leaflet": "^1.9.4",
-    "lodash": "^4.17.21",
     "react-leaflet": "4.2.1"
   }
 }
