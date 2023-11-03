@@ -8,7 +8,7 @@ import "./Property.css";
 import { FaShower } from "react-icons/fa"; //Fashower is used for bathroom icon
 import { AiTwotoneCar } from "react-icons/ai"; //for parking icon
 import { MdLocationPin, MdMeetingRoom } from "react-icons/md"; //for address and room icon
-import { Map } from "../../Components/Map/map";
+import { Map } from "../../Components/Map/Map";
 import useAuthCheck from "../../Hooks/useAuthCheck";
 import { useAuth0 } from "@auth0/auth0-react";
 import { BookingModal } from "../../Components/BookingModal/BookingModal";
