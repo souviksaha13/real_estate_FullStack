@@ -46,6 +46,7 @@ const AddPropertyModal = ({ opened, setOpened }) => {
         <Stepper
           active={active}
           onStepClick={setActive}
+          breakpoint="sm"
           allowNextStepsSelect={false}
         >
             {/* First step */}

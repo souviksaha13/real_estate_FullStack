@@ -1,0 +1,9 @@
+.left-location{
+    flex: 1;
+}
+@media  (max-width: 600px){
+    .location-container{
+        flex-direction: column;
+        display: block;
+    }
+}

@@ -5,6 +5,7 @@ import { Button, Group, Select, TextInput } from "@mantine/core";
 import useContries from "../../Hooks/useContries";
 import { Map } from "../Map/Map";
 import { useAuth0 } from "@auth0/auth0-react";
+import './AddLocation.css'
 
 const AddLocation = ({ propertyDetails, setPropertyDetails, nextStep }) => {
   const { getAll } = useContries();
@@ -48,7 +49,7 @@ const AddLocation = ({ propertyDetails, setPropertyDetails, nextStep }) => {
       }}
     >
       <div
-        className="flexCenter"
+        className="flexCenter location-container"
         style={{
           gap: "3rem",
           marginTop: "3rem",
@@ -83,7 +84,7 @@ const AddLocation = ({ propertyDetails, setPropertyDetails, nextStep }) => {
           />
         </div>
         {/* right side */} {/* render the map */}
-        <div style={{ flex: 1 }}>
+        <div className="left-location">
           <Map country={country} city={city} address={address} />
         </div>
       </div>
