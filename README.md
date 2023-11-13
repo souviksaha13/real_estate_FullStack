@@ -42,4 +42,6 @@ Welcome to Homyz, your go-to real estate application for discovering, saving, an
 ### Authentication
 - **Auth0**: Ensuring seamless and secure user authentication.
 
+## Demo
 
+- Check out the live demo of my portfolio website at :point_right: https://personal-portfolio.mayurigoswami.repl.co/.
