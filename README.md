@@ -44,4 +44,4 @@ Welcome to Homyz, your go-to real estate application for discovering, saving, an
 
 ## Demo
 
-- Check out the live demo of my portfolio website at :point_right: https://personal-portfolio.mayurigoswami.repl.co/.
+- Check out the live demo at :point_right: real-estate-full-stack-snowy.vercel.app/
