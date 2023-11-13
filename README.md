@@ -41,7 +41,3 @@ Welcome to Homyz, your go-to real estate application for discovering, saving, an
 
 ### Authentication
 - **Auth0**: Ensuring seamless and secure user authentication.
-
-## Demo
-
-- Check out the live demo at :point_right: [Homyz](https://real-estate-full-stack-snowy.vercel.app/)
