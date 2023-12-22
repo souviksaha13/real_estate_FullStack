@@ -5,19 +5,19 @@ const data = [
     icon: <HiShieldCheck/>,
     heading: "Best interest rates on the market",
     detail:
-      "Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat occaecat ut occaecat consequat est minim minim esse tempor laborum consequat esse adipisicing eu reprehenderit enim.",
+      "Unlock the best interest rates on Homyz! Stay informed on top-notch mortgage and loan rates to make confident decisions for your home. Your pathway to smarter homeownership starts here!",
   },
   {
     icon: <MdCancel />,
     heading: "Prevent unstable prices",
     detail:
-      "Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat occaecat ut occaecat consequat est minim minim esse tempor laborum consequat esse adipisicing eu reprehenderit enim.",
+      "Experience real estate stability with Homyz. Our platform uses advanced analytics to ensure secure and transparent transactions. Join our community where stability is the foundation of your real estate journey.",
   },
   {
     icon: <MdAnalytics />,
     heading: "Best price on the market",
     detail:
-      "Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat occaecat ut occaecat consequat est minim minim esse tempor laborum consequat esse adipisicing eu reprehenderit enim.",
+      "Discover the Best Prices on the Market at Homyz! Unbeatable prices, unparalleled quality. Explore Homyz for the best deals on stylish and affordable home essentials. Your dream home is just a click away!",
   },
 ];
 export default data;

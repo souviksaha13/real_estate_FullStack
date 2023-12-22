@@ -42,9 +42,12 @@ const Hero = () => {
           <div className="flexColStart hero-des secondaryText">
             <span>Find a variety of property that suits you very easily.</span>
             <span>Forget all difficulties in finding a residence for you.</span>
+            <span>Explore and find the most suitable property for your needs with us.</span>
           </div>
                 
-          {/* <SearchBar/> */}
+          <div className="black-box">
+            hii
+          </div>
         </div>
 
         {/* right side */}
@@ -58,7 +61,7 @@ const Hero = () => {
             }}
             className="image-container"
           >
-            <img src="./hero-image.png" alt="image" />
+            <img src="./Hero_Image.jpg" alt="image" />
           </motion.div>
         </div>
       </div>

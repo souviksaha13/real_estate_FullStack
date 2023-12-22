@@ -9,7 +9,7 @@ export const Website = () => {
   return (
     <div className="App">
       <div>
-        <div className="white-gradient"/>
+        {/* <div className="white-gradient"/> */}
           <Hero />
       </div>
       <Residencies/>

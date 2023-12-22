@@ -71,7 +71,13 @@
       width: 100%;
       height: 100%;
   }
-  
+  .black-box{
+    height: 90px;
+    width: 50px;
+    color: black;
+    background-color: black;
+  }
+
   /* mobile screens */
   @media  (max-width: 640px){
     .hero-container{
@@ -85,11 +91,16 @@
       width: 95%;
       height: 25rem;
     }
-    
+    .black-box{
+      display: none;
+    }
   }
   @media (max-width: 370px){
     .search-bar{
       margin-bottom: 50px;
       height: 50px;
+    }
+    .black-box{
+      display: none;
     }
   }
