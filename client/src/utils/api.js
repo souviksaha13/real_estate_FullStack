@@ -4,7 +4,7 @@ import { toast } from "react-toastify"; // Library for displaying toast notifica
 
 // Create an Axios instance with a base URL. This means that when we use api.get() or other Axios methods, they will automatically use this base URL as the prefix for the URLs we provide.
 export const api = axios.create({
-  baseURL: "http://localhost:8000/api",
+  baseURL: "https://real-estate-full-stack-mu.vercel.app/api",
 });
 
 // Asynchronous function to fetch properties or the custom query function for the useProperties.jsx file

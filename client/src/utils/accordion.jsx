@@ -3,21 +3,21 @@ import { MdCancel, MdAnalytics } from "react-icons/md";
 const data = [
   {
     icon: <HiShieldCheck/>,
-    heading: "Best interest rates on the market",
+    heading: "Your future dream home is just a click away",
     detail:
-      "Unlock the best interest rates on Homyz! Stay informed on top-notch mortgage and loan rates to make confident decisions for your home. Your pathway to smarter homeownership starts here!",
+      "Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat occaecat ut occaecat consequat est minim minim esse tempor laborum consequat esse adipisicing eu reprehenderit enim.",
   },
   {
     icon: <MdCancel />,
-    heading: "Prevent unstable prices",
+    heading: "Best price on the market",
     detail:
-      "Experience real estate stability with Homyz. Our platform uses advanced analytics to ensure secure and transparent transactions. Join our community where stability is the foundation of your real estate journey.",
+      "Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat occaecat ut occaecat consequat est minim minim esse tempor laborum consequat esse adipisicing eu reprehenderit enim.",
   },
   {
     icon: <MdAnalytics />,
-    heading: "Best price on the market",
+    heading: "Uncover possibilities, book a property tour",
     detail:
-      "Discover the Best Prices on the Market at Homyz! Unbeatable prices, unparalleled quality. Explore Homyz for the best deals on stylish and affordable home essentials. Your dream home is just a click away!",
+      "Exercitation in fugiat est ut ad ea cupidatat ut in cupidatat occaecat ut occaecat consequat est minim minim esse tempor laborum consequat esse adipisicing eu reprehenderit enim.",
   },
 ];
 export default data;

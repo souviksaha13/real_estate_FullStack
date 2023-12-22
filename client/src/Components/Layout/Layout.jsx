@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { Outlet } from "react-router-dom";
-import { Footer } from "../Footer/footer";
+import { Footer } from "../Footer/Footer";
 import Header from "../Header/Header"
 import { useAuth0 } from "@auth0/auth0-react";
 import { useMutation } from "react-query";
