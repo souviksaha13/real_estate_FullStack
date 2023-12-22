@@ -44,7 +44,7 @@ export const Value = () => {
             duration: 4,
             type: "spring",
           }} className="image-container">
-            <img src="./value.png" alt=""/>
+            <img src="./value_Image.jpg" alt=""/>
           </motion.div>
         </div>
         {/*Right Container */}

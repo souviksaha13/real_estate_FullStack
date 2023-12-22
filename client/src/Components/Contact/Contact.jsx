@@ -129,7 +129,7 @@ export const Contact = () => {
             }}
             className="image-container"
           >
-            <img src="contact.jpg" alt="" />
+            <img src="contact_Image.jpg" alt="" />
           </motion.div>
         </div>
       </div>
