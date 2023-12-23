@@ -53,4 +53,7 @@
     .accordionButton .primaryText{
         font-size: .7rem;
     }
+    .accordionButton .icon{
+        padding: 5px;
+    }
 }
